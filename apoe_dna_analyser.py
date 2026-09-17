@@ -1,6 +1,9 @@
+from pathlib import Path
+
 from Bio import SeqIO
 
-record = next(SeqIO.parse("gene.fna", "fasta"))
+sequence_file = Path(__file__).with_name("gene.fna.txt")
+record = next(SeqIO.parse(sequence_file, "fasta"))
 dna_seq = str(record.seq)
 
 print("Sequence ID:", record.id)
@@ -75,3 +78,5 @@ protein_seq = translate(rna_seq)
 print("Protein (first 60):", protein_seq[:60])
 print("Protein length:", len(protein_seq))
 
+test_sequence_file = Path(__file__).with_name("test_sequence.fna")
+record = next(SeqIO.parse(test_sequence_file, "fasta"))
