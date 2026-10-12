@@ -23,9 +23,6 @@ pip install biopython
 python apoe_dna_analyser.py
 ```
 
-## Example output
-(paste your real output here)
-
 ## Next steps
 - Extract the coding sequence (CDS) so translation matches the reference protein
 - Call the ε2/ε3/ε4 genotype from rs429358 and rs7412
